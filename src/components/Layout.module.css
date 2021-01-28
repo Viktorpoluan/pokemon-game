@@ -3,7 +3,7 @@
     min-height: 100vh;
     font-size: 1.4rem;
     position: relative;
-    clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+    /*clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);*/
     z-index: 5;
     background: #fafafa fixed;
 }
@@ -53,6 +53,7 @@
     padding-bottom: 1.5rem;
     color: #555;
     line-height: 1.9rem;
+    text-align: center;
 }
 
 .root .desc.full {
@@ -84,7 +85,7 @@
 
 @media only screen and (max-width: 949px) {
     .root {
-        clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);
+        /*clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);*/
         background-position: top left;
         background-size: cover;
     }
