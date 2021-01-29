@@ -1,4 +1,3 @@
-import React from 'react'
 import c from './Layout.module.css'
 
 const Layuot = ({id, title, desc, urlBg, colorBg}) => {
