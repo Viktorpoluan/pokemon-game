@@ -2,30 +2,30 @@ import {useState} from 'react'
 import c from './StylesForComponents/PokemonCard.module.css'
 import back from '../components/images/back.jpg'
 
-const PokemonCard = (props) => {
+const PokemonCard = ({id, type, name, img, values}) => {
     const [isActive, setActive] = useState(false)
     const reversCard = () => {
-        setActive(true)
+        setActive(!isActive)
     }
     return (
         <div className={c.root}>
             <div className={`${c.pokemonCard} ${isActive ? c.active : ''}`} onClick={reversCard}>
                 <div className={c.cardFront}>
                     <div className={`${c.wrap} ${c.front}`}>
-                        <div className={`${c.pokemon} ${c[props.type]}`}>
+                        <div className={`${c.pokemon} ${c[type]}`}>
                             <div className={c.values}>
-                                <div className={`${c.count} ${c.top}`}>{props.values.top}</div>
-                                <div className={`${c.count} ${c.right}`}>{props.values.right}</div>
-                                <div className={`${c.count} ${c.bottom}`}>{props.values.bottom}</div>
-                                <div className={`${c.count} ${c.left}`}>{props.values.left}</div>
+                                <div className={`${c.count} ${c.top}`}>{values.top}</div>
+                                <div className={`${c.count} ${c.right}`}>{values.right}</div>
+                                <div className={`${c.count} ${c.bottom}`}>{values.bottom}</div>
+                                <div className={`${c.count} ${c.left}`}>{values.left}</div>
                             </div>
                             <div className={c.imgContainer}>
-                                <img src={props.img} alt={props.name}/>
+                                <img src={img} alt={name}/>
                             </div>
                             <div className={c.info}>
-                                <span className={c.number}>#{props.id}</span>
-                                <h3 className={c.name}>{props.name}</h3>
-                                <small className={c.type}>Type: <span>{props.type}</span></small>
+                                <span className={c.number}>#{id}</span>
+                                <h3 className={c.name}>{name}</h3>
+                                <small className={c.type}>Type: <span>{type}</span></small>
                             </div>
                         </div>
                     </div>
