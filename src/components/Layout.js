@@ -1,6 +1,6 @@
-import c from './Layout.module.css'
+import c from './StylesForComponents/Layout.module.css'
 
-const Layuot = ({id, title, desc, urlBg, colorBg}) => {
+const Layuot = ({id, title, urlBg, colorBg, children}) => {
     return (
         <section className={c.root} id={id}
                  style={
@@ -12,22 +12,17 @@ const Layuot = ({id, title, desc, urlBg, colorBg}) => {
                  }
         >
             <div className={c.wrapper}>
-
                 <article>
                     <div className={c.title}>
                         <h3>{title}</h3>
                         <span className={c.separator}/>
                     </div>
                     <div className={`${c.desc} ${c.full}`}>
-                        <p>{desc}</p>
+                        {children}
                     </div>
                 </article>
             </div>
         </section>
-
     )
-
-
 }
-
 export default Layuot
