@@ -93,7 +93,7 @@ const state = [
             "speed": 45
         },
         "type": "grass",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjRueUYafY3LXZ-Rys3KHHbAsujrtxSOJ3wQ&usqp=CAU",
+        "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
         "name": "bulbasaur",
         "base_experience": 64,
         "height": 7,
@@ -134,4 +134,3 @@ const state = [
 ]
 export default state
 
-   // "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
