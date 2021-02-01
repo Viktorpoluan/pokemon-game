@@ -1,22 +1,19 @@
 import Navbar from "../../routes/Home/Navbar";
 import Menu from "../../routes/Home/Menu";
 import {useState} from "react";
-import HomePage from "../../routes/Home";
-import GamePage from "../../routes/Game";
-
 
 const MenuHeader = (props) => {
     const handleChangeList = (list) => {
         setList(list)
     }
-    const [list, setList] = useState('menu')
+    const [list, setList] = useState('navbar')
     switch (list) {
         case 'menu':
-            return <Menu />
+            return <Menu onChangeList={handleChangeList}/>
         case 'navbar':
             return <Navbar onChangeList={handleChangeList}/>
         default:
-            return <Menu/>
+            return <Navbar/>
     }
     return (
         <div>
