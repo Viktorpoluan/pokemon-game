@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import c from './StylesForComponents/PokemonCard.module.css'
 import back from '../components/images/back.jpg'
+import cl from 'classnames'
 
 const PokemonCard = ({id, type, name, img, values}) => {
     const [isActive, setActive] = useState(false)
@@ -8,8 +9,8 @@ const PokemonCard = ({id, type, name, img, values}) => {
         setActive(!isActive)
     }
     return (
-        <div className={c.root}>
-            <div className={`${c.pokemonCard} ${isActive ? c.active : ''}`} onClick={reversCard}>
+        <div className={c.root} onClick={reversCard}>
+            <div className={cl(c.pokemonCard,{[c.active]:isActive})}>
                 <div className={c.cardFront}>
                     <div className={`${c.wrap} ${c.front}`}>
                         <div className={`${c.pokemon} ${c[type]}`}>
