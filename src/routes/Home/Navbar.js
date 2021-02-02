@@ -3,18 +3,19 @@ import c from './Navbar.module.css'
 import {useState} from "react";
 
 const Navbar=(props)=> {
-    const [isActive, setActive] = useState(false)
-    const handleClick = () => {
-        props.onChangeList('menu');
-        setActive(!isActive)
+    /*const [isActive,setActive]=useState(false)*/
+
+    const handleClick =()=>{
+        props.onChangePage('menu')
+
     }
     return (
-        <nav id={c.navbar}>
+        <nav id={c.navbar} >
             <div className={c.navWrapper}>
                 <p className={c.brand}>
                     LOGO
                 </p>
-                <a className={cl(c.menuButton, {[c.active]:isActive})} onClick={handleClick}>
+                <a className={cl(c.menuButton, c.deactive)} onClick={handleClick} >
                     <span />
                 </a>
             </div>
