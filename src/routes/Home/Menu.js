@@ -1,14 +1,15 @@
 import c from './Menu.module.css'
 import cl from 'classnames'
 import {useState} from "react";
+
 const Menu=(props)=> {
-    const [isActive, setActive] = useState(true)
-    const handleClick = () => {
-        props.onChangeList('navbar');
-        setActive(!isActive)
+    /*const [isActive,setActive]=useState(true)*/
+    const handleClick =()=>{
+        props.onChangePage('navbar');
+
     }
 return(
-    <div className={cl(c.menuContainer,isActive? [c.active]:[c.deactive])} onClick={handleClick}>
+    <div className={cl(c.menuContainer,c.active)} onClick={handleClick}>
         <div className={c.overlay}/>
         <div className={c.menuItems} >
             <ul>
