@@ -3,13 +3,12 @@ import cl from 'classnames'
 import {useState} from "react";
 
 const Menu=(props)=> {
-    /*const [isActive,setActive]=useState(true)*/
+    const [isActive, setActive] = useState(true)
     const handleClick =()=>{
-        props.onChangePage('navbar');
-
+        props.changeState(setActive)
     }
     return(
-        <div className={cl(c.menuContainer,c.active)} onClick={handleClick}>
+        <div className={cl(c.menuContainer,{[c.active]:isActive})} onClick={handleClick}>
             <div className={c.overlay}/>
             <div className={c.menuItems} >
                 <ul>

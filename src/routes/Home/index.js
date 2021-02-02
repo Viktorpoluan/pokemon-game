@@ -4,7 +4,7 @@ import Footer from "../../components/Footer"
 import pokemon1 from '../../components/images/pokemon1.jpg'
 import PokemonCard from "../../components/PokemonCard"
 import c from './style.module.css'
-import MenuHeader from "../../components/StylesForComponents/MenuHeader";
+import MenuHeader from "../../components/MenuHeader";
 
 
 const HomePage = (props) => {

@@ -1,4 +1,4 @@
-#navbar {
+.navbar {
     position: fixed;
     z-index: 9999;
     width: 100%;
@@ -7,11 +7,11 @@
     justify-content: center;
 }
 
-#navbar.bgActive {
+.navbar.bgActive {
     background: #181d23;
 }
 
-#navbar .navWrapper {
+.navbar .navWrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@
     padding: 0 2rem;
 }
 
-#navbar .brand {
+.navbar .brand {
     font-size: 1.6rem;
     color: #fafafa;
     cursor: default;

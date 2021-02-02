@@ -1,5 +1,5 @@
 import c from './StylesForComponents/Layout.module.css'
-
+import cl from 'classnames'
 const Layuot = ({id, title, urlBg, colorBg, children}) => {
     return (
         <section className={c.root} id={id}
@@ -17,7 +17,7 @@ const Layuot = ({id, title, urlBg, colorBg, children}) => {
                         <h3>{title}</h3>
                         <span className={c.separator}/>
                     </div>
-                    <div className={`${c.desc} ${c.full}`}>
+                    <div className={cl(c.desc,c.full)}>
                         {children}
                     </div>
                 </article>
