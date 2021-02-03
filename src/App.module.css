@@ -1,6 +1,8 @@
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.wrap {
+
+    padding: 96px 32px 24px
+}
+
+.wrap.isHomePage {
+    padding: 0px;
 }
