@@ -3,27 +3,24 @@ import Menu from "../../routes/Home/Menu";
 import {useState} from "react";
 
 
-const MenuHeader = (props) => {
+const MenuHeader = ({bgActive}) => {
 
-    const handleChangePage = (page) => {
-        setPage(page)
+    const handleChangePage = () => {
+        setOpen(prevState => !prevState)
     }
-    const [page, setPage] = useState('menu')
-    switch (page) {
-        case 'navbar':
-            return <Navbar onChangePage={handleChangePage} />
-        case 'menu':
-            return <Menu onChangePage={handleChangePage}/>
+    const [isOpen, setOpen] = useState(null)
 
-        default:
-            return <Navbar/>
-    }
     return (
-        <div>
+        <>
+            <Navbar isOpen={isOpen} bgActive={bgActive} onChangePage={handleChangePage}/>
 
-
-        </div>
+            <Menu isOpen={isOpen}/>
+        </>
     )
+
 }
 
+
 export default MenuHeader
+
+

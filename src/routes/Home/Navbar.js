@@ -1,21 +1,16 @@
 import cl from 'classnames'
 import c from './Navbar.module.css'
-import {useState} from "react";
 
-const Navbar=(props)=> {
-    /*const [isActive,setActive]=useState(false)*/
 
-    const handleClick =()=>{
-        props.onChangePage('menu')
+const Navbar=({isOpen, onChangePage, bgActive=false})=> {
 
-    }
     return (
-        <nav id={c.navbar} >
+        <nav id={c.navbar} className={cl({[c.bgActive]:bgActive})} >
             <div className={c.navWrapper}>
                 <p className={c.brand}>
                     LOGO
                 </p>
-                <a className={cl(c.menuButton, c.deactive)} onClick={handleClick} >
+                <a className={cl(c.menuButton, {[c.active]:isOpen})} onClick={onChangePage}>
                     <span />
                 </a>
             </div>
