@@ -1,27 +1,24 @@
-
-import {useState} from "react";
 import Navbar from "../routes/Home/Navbar";
 import Menu from "../routes/Home/Menu";
+import {useState} from "react";
 
 
-const MenuHeader = () => {
-    const [isActive, setActive] = useState(true)
-    const changeState = () => {
-        setActive(!isActive)
+const MenuHeader = ({isPageActive}) => {
+
+    const handleChangePage = () => {
+        setUsed(prevState => !prevState)
     }
-    switch (isActive) {
-        case true:
-            return <Navbar changeState={changeState} />
-        case false:
-            return <Menu changeState={changeState}/>
-        default:
-    }
+    const [isUsed, setUsed] = useState(null)
+
     return (
-        <div>
+        <>
+            <Navbar isUsed={isUsed} isPageActive={isPageActive} onChangePage={handleChangePage}/>
 
-
-        </div>
+            <Menu isUsed={isUsed}/>
+        </>
     )
+
 }
+
 
 export default MenuHeader

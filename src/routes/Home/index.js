@@ -7,6 +7,7 @@ import c from './style.module.css'
 import MenuHeader from "../../components/MenuHeader";
 
 
+
 const HomePage = (props) => {
     const handleClick = (page) => {
         props.onChangePage(page)
