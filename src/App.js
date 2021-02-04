@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import PageAbout from "./routes/PageAbout";
 import ContactPage from "./routes/ContactPage";
 
+
 const App = (props) => {
     const match = useRouteMatch('/');
     return (
@@ -15,12 +16,13 @@ const App = (props) => {
             <Route>
                 <>
                     <MenuHeader isPageActive={!match.isExact}/>
-                    <div className={cl(c.wrap,{[c.isHomePage]:match.isExact})}>
+                    <div className={cl(c.wrap,{
+                        [c.isHomePage]:match.isExact})}>
                         <Switch>
-                            <Route path={'/home'} render={() => <HomePage state={props.state}/>}/>
-                            <Route path={'/game'} render={() => <GamePage/>}/>
-                            <Route path={'/about'} render={() => <PageAbout/>}/>
-                            <Route path={'/contact'} render={() => <ContactPage/>}/>
+                            <Route  path='/home' render={() => <HomePage />}/>
+                            <Route  path='/game' render={() => <GamePage state={props.state}/>}/>
+                            <Route  path='/about' render={() => <PageAbout/>}/>
+                            <Route  path='/contact' render={() => <ContactPage/>}/>
                         </Switch>
                     </div>
                     <Footer/>

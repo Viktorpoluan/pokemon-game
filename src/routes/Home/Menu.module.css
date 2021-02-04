@@ -4,7 +4,7 @@
     right: 0;
     height: calc( 100vh - 120px );
     width: calc( 100vw - 120px );
-    background: #fafafa;
+    /*background: #fafafa;*/
 }
 
 .menuContainer.active > .overlay {
@@ -46,6 +46,8 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    opacity: 0;
+    z-index: -1;
 }
 
 .menuContainer::before,

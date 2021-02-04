@@ -6,17 +6,17 @@ const Menu = ({isUsed}) => {
     const MENU = [
         {
             title: 'HOME',
-            to: '#home'
+            to: 'home'
         },
         {
             title: 'GAME',
-            to: '#game'
+            to: 'game'
         }, {
             title: 'ABOUT',
-            to: '#about'
+            to: 'about'
         }, {
             title: 'CONTACT',
-            to: '#contact'
+            to: 'contact'
         }
     ]
     return (

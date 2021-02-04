@@ -12,13 +12,11 @@ const MenuHeader = ({isPageActive}) => {
 
     return (
         <>
-            <Navbar isUsed={isUsed} isPageActive={isPageActive} onChangePage={handleChangePage}/>
-
             <Menu isUsed={isUsed}/>
+            <Navbar isUsed={isUsed} isPageActive={isPageActive} onChangePage={handleChangePage}/>
         </>
     )
 
 }
-
 
 export default MenuHeader
