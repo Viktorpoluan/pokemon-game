@@ -1,9 +1,8 @@
 import Header from "../../components/Header"
 import Layout from "../../components/Layout"
-import Footer from "../../components/Footer"
+
 import pokemon1 from '../../components/images/pokemon1.jpg'
-import PokemonCard from "../../components/PokemonCard"
-import c from './style.module.css'
+
 
 
 
@@ -44,20 +43,18 @@ const HomePage = (props) => {
                 </p>
             </Layout>
 
-            <Layout id={2}
+            {/*<Layout id={2}
                     title='Game cards'
                     colorBg='skyblue'>
-               {/* <div className={c.flex}>
+                <div className={c.flex}>
                     {someData}
-                </div>*/}
+                </div>
             </Layout>
 
             <Layout id={3}
                     title='title 3'
                     urlBg={pokemon1}>
-            </Layout>
-
-
+            </Layout>*/}
         </div>
     )
 }

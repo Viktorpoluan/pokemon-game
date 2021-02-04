@@ -1,7 +1,8 @@
+
 const PageAbout = () => {
    return(
         <div>
-            this is PageAbout
+            This is PageAbout
         </div>
    )
 }

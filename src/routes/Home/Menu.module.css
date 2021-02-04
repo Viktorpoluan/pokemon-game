@@ -4,7 +4,7 @@
     right: 0;
     height: calc( 100vh - 120px );
     width: calc( 100vw - 120px );
-    /*background: #fafafa;*/
+    background: #fafafa;
 }
 
 .menuContainer.active > .overlay {
@@ -150,7 +150,7 @@
     padding-left: .5rem;
 }
 
-.menuContainer ul li a::after {
+.menuContainer ul li button::after {
     content: ' »';
     font-size: 2.5rem;
     color: transparent;

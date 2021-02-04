@@ -1,10 +1,9 @@
-import c from './style.module.css'
 const ContactPage = (props) => {
-   return(
-        <div className={c.contact}>
-            this is ContactPage
+    return (
+        <div>
+            Our Contacts
         </div>
-   )
+    )
 }
 
 export default ContactPage
