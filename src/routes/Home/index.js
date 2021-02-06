@@ -1,27 +1,27 @@
 import Header from "../../components/Header"
 import Layout from "../../components/Layout"
-import Footer from "../../components/Footer"
+
 import pokemon1 from '../../components/images/pokemon1.jpg'
-import PokemonCard from "../../components/PokemonCard"
-import c from './style.module.css'
-import MenuHeader from "../../components/StylesForComponents/MenuHeader";
+
+
+
 
 
 const HomePage = (props) => {
     const handleClick = (page) => {
         props.onChangePage(page)
     }
-    let someData = props.state.map((d, id) => <PokemonCard key={id}
+   /* let someData = props.state.map((d, id) => <PokemonCard key={id}
                                                            type={d.type}
                                                            values={d.values}
                                                            img={d.img}
                                                            name={d.name}
                                                            id={d.id}
 
-    />)
+    />)*/
     return (
         <div>
-            <MenuHeader/>
+
             <Header title='Adorable  pokemon!'
                     desc='This is card game'
                     onClickButton={handleClick}
@@ -43,7 +43,7 @@ const HomePage = (props) => {
                 </p>
             </Layout>
 
-            <Layout id={2}
+            {/*<Layout id={2}
                     title='Game cards'
                     colorBg='skyblue'>
                 <div className={c.flex}>
@@ -54,9 +54,7 @@ const HomePage = (props) => {
             <Layout id={3}
                     title='title 3'
                     urlBg={pokemon1}>
-            </Layout>
-
-            <Footer/>
+            </Layout>*/}
         </div>
     )
 }
