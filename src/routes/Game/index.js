@@ -3,20 +3,25 @@ import c from "../Home/style.module.css";
 import {useState} from "react";
 
 const GamePage = (props) => {
-    const [isActive, setActive] = useState(null)
-    const reversCard = (isCActive) => {
-        setActive(isCActive)
+    const [pokemons, setPokemons] = useState(props.state)
+    const reversCard = (id) => {
+        setPokemons(prevState=>{
+            return Array.from(prevState,(objkt)=>{
+                if (objkt.id===id){
+                    objkt.active=true
+                }
+                return objkt
+            })
+        })
     }
-
-    let someData = props.state.map((d, id) => <PokemonCard key={id}
-                                                           type={d.type}
-                                                           values={d.values}
-                                                           img={d.img}
-                                                           name={d.name}
-                                                           id={d.id}
+    let someData = pokemons.map(({id, type, name, img, values, active}) => <PokemonCard key={id}
+                                                           type={type}
+                                                           values={values}
+                                                           img={img}
+                                                           name={name}
+                                                           id={id}
                                                            reversCard={reversCard}
-                                                           onClick={(isCActive)=>reversCard(isCActive)}
-                                                           isActive={isActive}
+                                                           isActive={active}
     />)
 
     return (

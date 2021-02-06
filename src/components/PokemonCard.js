@@ -2,10 +2,11 @@ import c from './StylesForComponents/PokemonCard.module.css'
 import back from '../components/images/back.jpg'
 import cl from 'classnames'
 
-const PokemonCard = ({id, type, name, img, values, isActive, onClick}) => {
+const PokemonCard = ({id, type, name, img, values, isActive, reversCard}) => {
     return (
         <div className={c.root} >
-            <div className={cl(c.pokemonCard, {[c.active]: isActive===id})} onClick={()=>onClick(id)}>
+            <div className={cl(c.pokemonCard,{[c.active]:isActive})}
+                 onClick={()=>{reversCard(id)}}>
                 <div className={c.cardFront}>
                     <div className={cl(c.wrap, c.front)}>
                         <div className={cl(c.pokemon, c[type])}>
