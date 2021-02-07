@@ -2,6 +2,7 @@ import PokemonCard from "../../components/PokemonCard";
 import c from "../Home/style.module.css";
 import {useState, useEffect} from "react";
 import database from "../../service/firebase";
+import random from 'utils.random'
 
 const GamePage = () => {
     const [pokemons, setPokemons] = useState({})
@@ -40,11 +41,11 @@ const GamePage = () => {
                 "speed": 80
             },
             "type": "poison",
-            "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png",
+            "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+random(100,900)+".png",
             "name": "arbok",
             "base_experience": 157,
             "height": 35,
-            "id": 2222,
+            "id": random(100,900),
             "values": {
                 "top": 5,
                 "right": 9,
@@ -67,7 +68,6 @@ const GamePage = () => {
                                                                                                                id={id}
                                                                                                                reversCard={reversCard}
                                                                                                                isActive={active}
-        /*addPoke={addPoke}*/
     />)
     debugger
     return (
