@@ -4,7 +4,7 @@ import cl from 'classnames'
 
 const PokemonCard = ({id, type, name, img, values, isActive, reversCard}) => {
     return (
-        <div className={c.root} >
+        <div className={c.root}>
             <div className={cl(c.pokemonCard,{[c.active]:isActive})}
                  onClick={()=>{reversCard(id)}}>
                 <div className={c.cardFront}>
@@ -36,6 +36,7 @@ const PokemonCard = ({id, type, name, img, values, isActive, reversCard}) => {
 
             </div>
         </div>
+
     )
 }
 export default PokemonCard

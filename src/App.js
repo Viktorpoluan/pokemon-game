@@ -8,7 +8,9 @@ import Footer from "./components/Footer";
 import PageAbout from "./routes/PageAbout";
 import ContactPage from "./routes/ContactPage";
 
-const App = (props) => {
+
+
+const App = () => {
     const match = useRouteMatch('/');
     return (
         <Switch>
@@ -26,9 +28,9 @@ const App = (props) => {
                             />
                             <Route path='/game' render={() => (
 
-                                <GamePage state={props.state}/>
+                                <GamePage /*state={props.state}*//>
                             )}/>
-                            <Route path='/about' render={() => <PageAbout state={props.state}/>}/>
+                            <Route path='/about' render={() => <PageAbout /*state={props.state}*//>}/>
                             <Route path='/contact' render={() => <ContactPage/>}/>
                             <Route render={() => <Redirect to='/404'/>}/>
                         </Switch>
