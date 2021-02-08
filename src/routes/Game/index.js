@@ -1,31 +1,35 @@
 import PokemonCard from "../../components/PokemonCard";
 import c from "../Home/style.module.css";
-import {useState, useEffect} from "react";
-import database from "../../service/firebase";
+import {useState, useEffect, useContext} from "react";
+
 import random from 'utils.random'
+import {FireBaseContexts} from "../../components/context/firebaseContext";
 
 const GamePage = () => {
+    const firebase = useContext(FireBaseContexts)
     const [pokemons, setPokemons] = useState({})
+    const getPokemons= async ()=>{
+        const response = await firebase.getPokemonsOnetime()
+        setPokemons(response)
+    }
     useEffect(() => {
-        database.ref('pokemons').once('value', (snapshot) => {
-            setPokemons(snapshot.val())
-        })
+        getPokemons()
     }, [])
+
     const reversCard = (id) => {
         setPokemons(prevState => {
             return Object.entries(prevState).reduce((acc, item) => {
                 const pokemon = {...item[1]}
                 if (pokemon.id === id) {
                     pokemon.active = !pokemon.active
-                    database.ref('pokemons/' + item[0]).set({...pokemon, active: pokemon.active})
-
                 }
                 acc[item[0]] = pokemon
+                firebase.postPokemon(item[0], pokemon)
                 return acc;
             }, {})
         })
     }
-    const addCard = (id) => {
+    const addCard = () => {
         const pokemon = {
             "abilities": [
                 "intimidate",
@@ -53,10 +57,8 @@ const GamePage = () => {
                 "left": "A"
             }
         }
-        const newKey = database.ref().child('pokemons').push().key
-        database.ref('pokemons/' + newKey).set({...pokemon})
-        database.ref('pokemons').once('value', (snapshot) => {
-            setPokemons(snapshot.val())
+        firebase.addPokemon(pokemon, async ()=>{
+          await  getPokemons()
         })
     }
 
