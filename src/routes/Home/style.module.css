@@ -5,3 +5,32 @@
     flex-wrap: wrap;
 }
 
+body {
+
+    background: #d6eaf8;
+}
+
+.button {
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    left: 50%;
+    text-decoration: none;
+    display: flex;
+    font-size: large;
+    color: black;
+    padding: 20px 200px 20px 200px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+
+.button:hover {
+    background-position: right center;
+}
