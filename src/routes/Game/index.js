@@ -92,23 +92,37 @@ import BoardPage from "./routes/Board/BoardPage";
 import FinishPage from "./routes/Finish/FinishPage";
 import {PokemonContext} from "../../components/context/pokemonContext";
 import {useState} from "react";
-import firebaseD from "../../service/fireBase";
-
 
 const GamePage = () => {
+
+    const [selectedPokemon, setSelectedPokemon] = useState({})
+
     const match = useRouteMatch();
 
+    const handlePokemon = (key, pokemon) => {
+        setSelectedPokemon(prevState => {
+            if (prevState[key]) {
+                const copyState = {...prevState}
+                delete copyState[key]
+                return copyState
+            }
+            return {
+                ...prevState,
+                [key]: pokemon
+            }
+        })
+    }
+
     return (
-
+        <PokemonContext.Provider value={{
+            pokemons: selectedPokemon, onSelect: handlePokemon
+        }}>
             <Switch>
-                <Route path={`${match.path}/`} exact component={StartPage}/>
-                <Route path={`${match.path}/board`}>
-                    <BoardPage/>
-                    <Redirect to={`${match.path}/`}/>}
-                </Route>
-                <Route path={`${match.path}/finish`} component={FinishPage}/>
+                <Route path={`${match.path}/`} exact component={StartPage} />
+                <Route path={`${match.path}/board`} component={BoardPage} />
+                <Route path={`${match.path}/finish`} component={FinishPage} />
             </Switch>
-
+        </PokemonContext.Provider>
 
     )
 };

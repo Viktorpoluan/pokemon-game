@@ -1,6 +1,6 @@
 import c from './Menu.module.css'
 import cl from 'classnames'
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const Menu = ({isUsed, onChangePage}) => {
     const MENU = [
@@ -27,9 +27,9 @@ const Menu = ({isUsed, onChangePage}) => {
                     {
                         MENU.map(({title, to}, index) => (
                             <li key={index}>
-                                <Link to={to}>
+                                <NavLink to={`/${to}`}>
                                     {title}
-                                </Link>
+                                </NavLink>
                             </li>
                         ))
                     }

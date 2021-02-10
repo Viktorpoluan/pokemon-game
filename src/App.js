@@ -1,6 +1,6 @@
 import cl from 'classnames'
 import c from './App.module.css'
-import {Route, Switch, useRouteMatch, Redirect} from 'react-router-dom'
+import {Route, Switch, useRouteMatch, Redirect, useLocation} from 'react-router-dom'
 import HomePage from "./routes/Home";
 import GamePage from "./routes/Game";
 import MenuHeader from "./components/MenuHeader";
@@ -12,18 +12,19 @@ import firebaseD from "./service/fireBase";
 
 
 const App = () => {
-    const match = useRouteMatch('/');
+   const location = useLocation()
+    const isPadding= location.pathname === '/' || location.pathname === '/game/board'
     return (
 
             <Switch>
-               {/* <Route path='/404' render={() => (
-                    <div>404 NOT FOUND</div>
-                )}/>*/}
+                <Route path='/404' render={() => (
+                    <h1>404 NOT FOUND</h1>
+                )}/>
                 <Route>
                     <>
-                        <MenuHeader isPageActive={!match.isExact}/>
+                        <MenuHeader isPageActive={!isPadding}/>
                         <div className={cl(c.wrap, {
-                            [c.isHomePage]: match.isExact
+                            [c.isHomePage]:isPadding
                         })}>
                             <Switch>
                                 <Route path='/home' component={HomePage}
