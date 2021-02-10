@@ -1,3 +1,4 @@
+/*
 import PokemonCard from "../../components/PokemonCard";
 import c from "../Home/style.module.css";
 import {useState, useEffect, useContext} from "react";
@@ -83,4 +84,33 @@ const GamePage = () => {
         </>
     )
 }
+export default GamePage*/
+
+import {Redirect, Route, Switch, useRouteMatch} from "react-router-dom";
+import StartPage from "./routes/Start/StartPage";
+import BoardPage from "./routes/Board/BoardPage";
+import FinishPage from "./routes/Finish/FinishPage";
+import {PokemonContext} from "../../components/context/pokemonContext";
+import {useState} from "react";
+import firebaseD from "../../service/fireBase";
+
+
+const GamePage = () => {
+    const match = useRouteMatch();
+
+    return (
+
+            <Switch>
+                <Route path={`${match.path}/`} exact component={StartPage}/>
+                <Route path={`${match.path}/board`}>
+                    <BoardPage/>
+                    <Redirect to={`${match.path}/`}/>}
+                </Route>
+                <Route path={`${match.path}/finish`} component={FinishPage}/>
+            </Switch>
+
+
+    )
+};
+
 export default GamePage

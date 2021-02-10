@@ -1,10 +1,9 @@
+import Layout from "../../../../components/Layout";
 
 const FinishPage = () => {
     return (
-        <div>
-            YYYYYYYYYYYYYYYYy
-        </div>
-    )
-}
+        <Layout id="finish" title={'You WIN'} bgColor={'#396BF1'}/>
+    );
+};
 
-export default FinishPage
+export default FinishPage;

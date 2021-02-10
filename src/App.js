@@ -16,9 +16,9 @@ const App = () => {
     return (
 
             <Switch>
-                <Route path='/404' render={() => (
+               {/* <Route path='/404' render={() => (
                     <div>404 NOT FOUND</div>
-                )}/>
+                )}/>*/}
                 <Route>
                     <>
                         <MenuHeader isPageActive={!match.isExact}/>
@@ -26,7 +26,7 @@ const App = () => {
                             [c.isHomePage]: match.isExact
                         })}>
                             <Switch>
-                                <Route path='/home' exact component={HomePage}
+                                <Route path='/home' component={HomePage}
                                 />
                                 <Route path='/game' render={() => (
 
@@ -34,7 +34,7 @@ const App = () => {
                                 )}/>
                                 <Route path='/about' render={() => <PageAbout /*state={props.state}*//>}/>
                                 <Route path='/contact' render={() => <ContactPage/>}/>
-                                <Route render={() => <Redirect to='/404'/>}/>
+                                {/*<Route render={() => <Redirect to='/404'/>}/>*/}
                             </Switch>
                         </div>
                         <Footer/>

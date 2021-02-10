@@ -17,6 +17,14 @@ class firebaseD {
         this.fire = firebase
         this.database = this.fire.database()
     }
+    getPokemonSocet=(cb)=>{
+        this.database.ref('pokemons').on('value', (snapshot)=>{
+            cb(snapshot.val())
+        })
+    }
+    offPokemonSocet=()=> {
+        this.database.ref('pokemons').off()
+    }
 
     getPokemonsOnetime = async () => {
         return await this.database.ref('pokemons').once('value').then(snapshot => snapshot.val())
