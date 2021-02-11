@@ -1,6 +1,5 @@
 import c from './style.module.css'
 import {useState, useEffect, useContext} from "react";
-import random from 'utils.random'
 import PokemonCard from "../../../../components/PokemonCard";
 import {FireBaseContexts} from "../../../../components/context/firebaseContext";
 import {PokemonContext} from "../../../../components/context/pokemonContext";

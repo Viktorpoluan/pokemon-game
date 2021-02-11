@@ -6,12 +6,20 @@ import {useState, useEffect, useContext} from "react";
 import random from 'utils.random'
 import {FireBaseContexts} from "../../components/context/firebaseContext";
 
+<<<<<<< Updated upstream
 const GamePage = () => {
     const firebase = useContext(FireBaseContexts)
     const [pokemons, setPokemons] = useState({})
     const getPokemons= async ()=>{
         const response = await firebase.getPokemonsOnetime()
         setPokemons(response)
+=======
+const GamePage = (props) => {
+    const [isActive, setActive] = useState(null)
+
+    const reversCard = (isCActive) => {
+        setActive(isCActive)
+>>>>>>> Stashed changes
     }
     useEffect(() => {
         getPokemons()

@@ -1,5 +1,4 @@
 import s from '../components/StylesForComponents/PokemonCard.module.css'
-
 import cn from 'classnames'
 
 const PokemonCard = ({id, type, name, img, values, isActive, reversCard, className, isSelected, minimize}) => {
