@@ -1,8 +1,7 @@
 import s from '../components/StylesForComponents/PokemonCard.module.css'
-import back from '../components/images/back.jpg'
 import cn from 'classnames'
 
-const PokemonCard = ({id, type, name, img, values, isActive, reversCard, className, isSelected,minimize}) => {
+const PokemonCard = ({id, type, name, img, values, isActive, reversCard, className, isSelected, minimize}) => {
     return (
         <div className={cn(className, s.pokemonCard, {
             [s.active]: isActive,
@@ -19,9 +18,9 @@ const PokemonCard = ({id, type, name, img, values, isActive, reversCard, classNa
                             <div className={cn(s.count, s.left)}>{values.left}</div>
                         </div>
                         <div className={s.imgContainer}>
-                            <img src={img} alt={name} />
+                            <img src={img} alt={name}/>
                         </div>
-                        { !minimize && (<div className={s.info}>
+                        {!minimize && (<div className={s.info}>
                             <span className={s.number}>#{id}</span>
                             <h3 className={s.name}>
                                 {name}
@@ -29,13 +28,13 @@ const PokemonCard = ({id, type, name, img, values, isActive, reversCard, classNa
                             <small className={s.type}>
                                 Type: <span>{type}</span>
                             </small>
-                        </div>) }
+                        </div>)}
                     </div>
                 </div>
             </div>
 
             <div className={s.cardBack}>
-                <div className={cn(s.wrap, s.back)} />
+                <div className={cn(s.wrap, s.back)}/>
             </div>
 
         </div>
