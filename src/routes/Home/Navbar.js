@@ -8,9 +8,9 @@ const Navbar = ({isUsed, onChangePage, isPageActive = false}) => {
                 <p className={c.brand}>
                     LOGO
                 </p>
-                <a className={cl(c.menuButton, {[c.active]: isUsed})} onClick={onChangePage}>
+                <div className={cl(c.menuButton, {[c.active]: isUsed})} onClick={onChangePage}>
                     <span/>
-                </a>
+                </div>
             </div>
         </nav>
     )

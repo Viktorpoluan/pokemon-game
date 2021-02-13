@@ -1,6 +1,6 @@
 import c from './Menu.module.css'
 import cl from 'classnames'
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const Menu = ({isUsed, onChangePage}) => {
     const MENU = [

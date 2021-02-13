@@ -94,7 +94,7 @@ const GamePage = (props) => {
 }
 export default GamePage*/
 
-import {Redirect, Route, Switch, useRouteMatch} from "react-router-dom";
+import {Route, Switch, useRouteMatch} from "react-router-dom";
 import StartPage from "./routes/Start/StartPage";
 import BoardPage from "./routes/Board/BoardPage";
 import FinishPage from "./routes/Finish/FinishPage";

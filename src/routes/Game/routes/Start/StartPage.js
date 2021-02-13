@@ -32,7 +32,7 @@ const StartPage = () => {
         }))
     }
     return (
-        <div className={c.game}>
+        <div>
             <div className={c.buttonWrap}>
                 <button onClick={handStartGame}
                         disabled={Object.keys(poKemonContext.pokemons).length<5}
