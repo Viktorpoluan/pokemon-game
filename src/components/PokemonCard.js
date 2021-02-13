@@ -1,7 +1,7 @@
 import s from '../components/StylesForComponents/PokemonCard.module.css'
 import cn from 'classnames'
 
-const PokemonCard = ({id, type, name, img, values, isActive, reversCard, className, isSelected, minimize}) => {
+const PokemonCard = ({id, type, name, img, values, isActive, reversCard, className,possession, isSelected, minimize}) => {
     return (
         <div className={cn(className, s.pokemonCard, {
             [s.active]: isActive,
@@ -10,7 +10,7 @@ const PokemonCard = ({id, type, name, img, values, isActive, reversCard, classNa
              onClick={reversCard}>
             <div className={s.cardFront}>
                 <div className={cn(s.wrap, s.front)}>
-                    <div className={cn(s.pokemon, s[type])}>
+                    <div className={cn(s.pokemon, s[type])} style={{backgroundColor:possession}}>
                         <div className={s.values}>
                             <div className={cn(s.count, s.top)}>{values.top}</div>
                             <div className={cn(s.count, s.right)}>{values.right}</div>
