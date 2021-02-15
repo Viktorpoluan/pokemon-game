@@ -1,53 +1,110 @@
 .root {
-    background-image: url(../../../../../src/components/images/board.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: calc(100vw / 1.71);
-    position: relative;
+  background-image: url(../../../../assets/board.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vw / 1.71);
+  position: relative;
 }
+
 .board {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    position: absolute;
-    width: 50.3vw;
-    height: 50.3vw;
-    top: 4.3vw;
-    left: 25.1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  position: absolute;
+  width: 50.3vw;
+  height: 50.3vw;
+  top: 4.3vw;
+  left: 25.1vw;
 }
 
 .boardPlate {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 .boardPlate:hover {
-    background: rgba(255,255,255, .1);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 28px;
 }
 .boardPlate.disabled:hover {
-    background: none;
+  background: none;
 }
 
 .card {
-    max-height: 14.8vw;
-    margin-top: -6vw;
+  max-height: 14.8vw;
+  margin-top: -6vw;
 }
 
+/* .card {
+  width: 100%;
+  height: 100px;
+  max-width: 268px;
+  max-height: 188px;
+  cursor: pointer;
+} */
+
 .card:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 .playerOne {
-    position: absolute;
-    top: 4.3vw;
-    left: 5vw;
-    width: 250px;
-    height: 50.3vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  top: 4.3vw;
+  left: 2vw;
+  width: 250px;
+  height: 50.3vw;
+  overflow: hidden;
+  margin-top: 40px;
+  /* overflow: hidden; */
 }
+
 .playerTwo {
-    position:absolute;
-    top: 4.3vw;
-    right: 5vw;
-    width: 250px;
-    height: 50.3vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  top: 4.3vw;
+  right: -1vw;
+  width: 250px;
+  height: 50.3vw;
+  margin-top: 40px;
+  /* overflow: hidden; */
+}
+
+.buttonWrap {
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.buttonWrap button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 10px auto;
+  background-color: #f300b4;
+  color: white;
+  font-size: 24px;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.buttonWrap button:hover {
+  background-color: #f300b4;
+  padding: 12px 24px;
+  margin: 8px auto;
+}
+
+.buttonWrap button:active {
+  background-color: #f300b4;
+  padding: 8px 18px;
+  margin: 12px auto;
 }
