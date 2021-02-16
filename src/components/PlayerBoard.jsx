@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PokemonCard from "./PokemonCard";
 import s from './StyleForComponents/PlayBoard.module.css'
+import cl from 'classnames'
+import j from './StyleForComponents/PokemonCard.module.css'
 
 const PlayerBoard = ({ player, cards, onClickCard, minimize }) => {
     const [isSelected_, setSelected] = useState(null);
@@ -10,7 +12,7 @@ const PlayerBoard = ({ player, cards, onClickCard, minimize }) => {
     };
 
     return (
-        <div className={s.cardBoard}>
+        <div className={cl(s.cardBoard, j.selected)}>
             {cards.map((card) => (
                 <PokemonCard
                     key={card.id}
