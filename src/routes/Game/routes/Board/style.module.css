@@ -1,5 +1,5 @@
 .root {
-    background-image: url(../../../../../src/components/images/board.png);
+    background-image: url(../../../../../src/assets/board.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100vw / 1.71);
@@ -8,7 +8,7 @@
 .board {
     display: grid;
     grid-template-columns: auto auto auto;
-    position: absolute;
+    position:fixed;
     width: 50.3vw;
     height: 50.3vw;
     top: 4.3vw;
@@ -16,21 +16,23 @@
 }
 
 .boardPlate {
-<<<<<<< Updated upstream
+/*<<<<<<< Updated upstream
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 6px;
     cursor: pointer;
-=======
-  display: flex;
+=======*/
+    display: flex;
   justify-content: center;
   align-items: center;
   padding: 6px;
   cursor: pointer;
-  margin: 0;
 
->>>>>>> Stashed changes
+
+
+
+/*>>>>>>> Stashed changes*/
 }
 .boardPlate:hover {
     background: rgba(255,255,255, .1);
@@ -40,6 +42,7 @@
 }
 
 .card {
+
     max-height: 14.8vw;
     margin-top: -6vw;
 }
@@ -60,4 +63,5 @@
     right: 5vw;
     width: 250px;
     height: 50.3vw;
+    padding: 20px;
 }

@@ -10,7 +10,7 @@ const PokemonCard = ({key_, id, type, values: {top, right, bottom, left}, img, n
 
 
 return (
-    <div /*className={minimize ? s.root__min : s.root}*/ onClick={handleClick} style={{backgroundColor:possession}}>
+    <div className={minimize ? s.root__min : s.root} onClick={handleClick} >
         <div
             className={` 
           ${s.pokemonCard} 
@@ -23,7 +23,7 @@ return (
         >
             <div className={s.cardFront}>
                 <div className={`${s.wrap} ${s.front}`}>
-                    <div className={`${s.pokemon} ${s[type]}`}>
+                    <div className={`${s.pokemon} ${s[type]}`} style={{backgroundColor:possession}}>
                         <div className={s.values}>
                             <div className={`${s.count} ${s.top}`}>{top}</div>
                             <div className={`${s.count} ${s.right}`}>{right}</div>

@@ -22,9 +22,11 @@ const Container = () => {
           ])
       );
       setPokemons(pokemons_);
+      console.log(pokemons_)
     });
     return () => Firebase.offPokemonsSoket();
   }, [Firebase]);
+
 
   const handleClickCard = (key) => {
     if (Object.keys(selectedPokemons).length < 5 || selectedPokemons[key]) {
