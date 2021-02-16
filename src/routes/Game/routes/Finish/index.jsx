@@ -1,15 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
-import { FireBaseContext } from "../../../../context/fireBaseContext";
-import { PokemonContext } from "../../../../context/pokemonContext";
-import { useHistory } from "react-router-dom";
+import React, {useContext, useEffect, useState} from "react";
+import {FireBaseContext} from "../../../../context/fireBaseContext";
+import {PokemonContext} from "../../../../context/pokemonContext";
+import {useHistory} from "react-router-dom";
 import PlayerBoard from "../../../../components/PlayerBoard";
 // import PokemonCard from "../../../../components/PokemonCard";
 import s from "./style.module.css";
+import sc from '../../../../components/StyleForComponents/PlayBoard.module.css'
+import cl from 'classnames'
 
 export default function FinishPage() {
     const history = useHistory();
-    const { player1Cards, player2Cards, setSelectedPokemons } = useContext(PokemonContext);
-    const { addPokemon } = useContext(FireBaseContext);
+    const {player1Cards, player2Cards, setSelectedPokemons} = useContext(PokemonContext);
+    const {addPokemon} = useContext(FireBaseContext);
     // const [isSelected_, setSelected] = useState(null);
     const [selectedCard, setSelectedCard] = useState(null);
 
@@ -40,12 +42,17 @@ export default function FinishPage() {
     return (
         <div className={s.root}>
             <div className={s.playerOne}>
-                <PlayerBoard
-                    className={s.playerOne}
-                    player={1}
-                    cards={[...Object.values(player1Cards)]}
-                    onClickCard={handleClickCard}
-                />
+                <div className={sc.playerC}>
+                    <PlayerBoard
+                        className={sc.playerC}
+                        player={1}
+
+                        cards={[...Object.values(player1Cards)]}
+
+
+                        onClickCard={handleClickCard}
+                    />
+                </div>
             </div>
             <div className={s.buttonWrap}>
                 <button

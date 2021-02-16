@@ -12,9 +12,11 @@ const PlayerBoard = ({ player, cards, onClickCard, minimize }) => {
     };
 
     return (
-        <div className={cl(s.cardBoard, j.selected)}>
+        <div /*className={s.playerC}*/>
             {cards.map((card) => (
                 <PokemonCard
+                    className={s.cardBoard}
+                    classNames={s.playerC}
                     key={card.id}
                     key_={card.id}
                     id={card.id}
@@ -23,7 +25,6 @@ const PlayerBoard = ({ player, cards, onClickCard, minimize }) => {
                     img={card.img}
                     name={card.name}
                     minimize={minimize}
-                    className={s.card}
                     isActive={true}
                     isSelected={true}
                     isSelected_={isSelected_}

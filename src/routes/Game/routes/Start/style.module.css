@@ -1,7 +1,7 @@
 .flex{
     display: grid;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto auto auto;
     grid-gap: 40px;
 }
 
@@ -38,12 +38,12 @@
   margin: 8px auto;
 }
 
-.card {
+/*.card {
   margin-top: 30px;
   width: 100%;
   height: 370px;
   cursor: pointer;
-}
+}*/
 
 @media screen and (max-width: 1200px) {
   .flex {

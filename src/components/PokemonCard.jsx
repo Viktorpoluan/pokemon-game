@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./StyleForComponents/PokemonCard.module.css";
 
-const PokemonCard = ({key_, id, type, values: {top, right, bottom, left}, img, name, isActive, minimize, className, isSelected, isSelected_, handleClickCard, onClickCard, possession
+const PokemonCard = ({key_, id, type, values: {top, right, bottom, left}, img, classNames, name, isActive, minimize, isSelected, isSelected_, handleClickCard, onClickCard, possession
                      }) => {
     const handleClick = () => {
         handleClickCard && handleClickCard(key_);
@@ -12,9 +12,9 @@ const PokemonCard = ({key_, id, type, values: {top, right, bottom, left}, img, n
 return (
     <div className={minimize ? s.root__min : s.root} onClick={handleClick} >
         <div
-            className={` 
-          ${s.pokemonCard} 
-          ${className}
+            className={`
+            ${classNames}
+          ${s.pokemonCard}
           ${isSelected && s.selected} 
           ${isActive ? s.active : ""} 
           ${isSelected_ === id ? s.selected2 : ""}
