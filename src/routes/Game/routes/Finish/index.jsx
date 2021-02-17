@@ -8,7 +8,9 @@ import s from "./style.module.css";
 import sc from '../../../../components/StyleForComponents/PlayBoard.module.css'
 import cl from 'classnames'
 
+
 export default function FinishPage() {
+
     const history = useHistory();
     const {player1Cards, player2Cards, setSelectedPokemons} = useContext(PokemonContext);
     const {addPokemon} = useContext(FireBaseContext);
@@ -41,18 +43,15 @@ export default function FinishPage() {
 
     return (
         <div className={s.root}>
-            <div className={s.playerOne}>
-                <div className={sc.playerC}>
+            <div className={cl(s.playerOne, s.selected)}>
+
                     <PlayerBoard
-                        className={sc.playerC}
+
                         player={1}
-
                         cards={[...Object.values(player1Cards)]}
-
-
                         onClickCard={handleClickCard}
                     />
-                </div>
+
             </div>
             <div className={s.buttonWrap}>
                 <button

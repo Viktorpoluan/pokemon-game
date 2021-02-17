@@ -31,12 +31,31 @@
   grid-template-columns: auto auto auto auto auto;*/
   display: flex;
   flex-direction: row;
+
+}
+.playerOne:first-child{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 40px;
+ margin-left: 100px;
+ margin-right: 100px;
 }
 
 .playerTwo {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  /*display: flex;
+  flex-direction: row;*/
 }
+/*.playerTwo:first-child{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 20px;
+}*/
+
 
 .buttonWrap{
   margin: 10px 0 50px 0;

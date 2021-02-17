@@ -143,6 +143,7 @@ const BoardPage = () => {
         <div className={s.root}>
             <div className={s.playerOne}>
                 <PlayerBoard
+
                     player={1}
                     cards={Object.values(player1)}
                     minimize={true}

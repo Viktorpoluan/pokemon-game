@@ -1,8 +1,12 @@
 .flex{
     display: grid;
     grid-template-rows: auto ;
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-gap: 40px;
+    grid-template-columns: auto auto auto auto auto;
+  margin-right: 50px;
+  margin-left: 50px;
+  justify-content: center;
+    grid-gap: 70px;
+  background-color: #49F3D8;
 }
 
 .buttonWrap{

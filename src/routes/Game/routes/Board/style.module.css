@@ -51,24 +51,25 @@
 }*/
 .playerOne {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 120px;
+    grid-template-columns: 250px;
+    grid-template-rows: 180px 180px 180px 180px 180px;
     margin: 20px;
-
-    position: absolute;
+    position: fixed;
     top: 4.3vw;
     left: 5vw;
-    width: 250px;
     height: 50.3vw;
+
 }
+
 .playerTwo {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 120px;
-    position:absolute;
+    grid-template-columns: 250px;
+    grid-template-rows: 180px 180px 180px 180px 180px;
+    margin: 20px;
+    position: absolute;
     top: 4.3vw;
     right: 5vw;
-    width: 250px;
     height: 50.3vw;
-    padding: 20px;
+
+
 }
