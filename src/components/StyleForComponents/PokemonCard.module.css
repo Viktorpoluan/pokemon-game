@@ -3,7 +3,6 @@
   max-height: 250px;*/
   width: 234px;
   height: 325px;
-
   perspective: 1000px;
   cursor: pointer;
 }
@@ -22,7 +21,6 @@
 /*.root__min:nth-child(1n + 2) {
   margin-top: -100px;
 }*/
-
 
 .pokemonCard {
   --fire: #fddfdf;

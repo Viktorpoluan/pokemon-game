@@ -48,7 +48,6 @@
   height: 370px;
   cursor: pointer;
 }*/
-
 @media screen and (max-width: 1200px) {
   .flex {
     display: grid;

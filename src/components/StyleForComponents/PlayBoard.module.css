@@ -2,10 +2,6 @@
     display: grid;
     grid-template-rows: 120px 120px 120px 120px 120px;
     grid-template-columns: 120px;
-
-
-    /*flex-direction: column;
-    max-height: 14.8vw;*/
     margin: 50px;
 }
 /*.playerC{
