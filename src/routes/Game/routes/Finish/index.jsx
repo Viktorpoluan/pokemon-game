@@ -34,10 +34,7 @@ export default function FinishPage() {
     };
     // console.log("FinishPage|player1Cards", player1Cards);
     // console.log("FinishPage|player2Cards", player2Cards);
-
-    // const handleClickCard = (id) => {
-    //   setSelected(id);
-    // };
+    
 
     return (
         <div className={s.root}>
@@ -46,9 +43,7 @@ export default function FinishPage() {
                     <PlayerBoard
                         className={sc.playerC}
                         player={1}
-
                         cards={[...Object.values(player1Cards)]}
-
 
                         onClickCard={handleClickCard}
                     />
