@@ -4,11 +4,14 @@
     background-repeat: no-repeat;
     height: calc(100vw / 1.71);
     position: relative;
+
+
 }
+
 .board {
     display: grid;
     grid-template-columns: auto auto auto;
-    position:fixed;
+    position: absolute;
     width: 50.3vw;
     height: 50.3vw;
     top: 4.3vw;
@@ -16,27 +19,31 @@
 }
 
 .boardPlate {
-/*<<<<<<< Updated upstream
+    /*<<<<<<< Updated upstream
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        cursor: pointer;
+    =======*/
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: -50px;
+    max-width: 500px;
+    max-height: 500px;
     padding: 6px;
     cursor: pointer;
-=======*/
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px;
-  cursor: pointer;
 
 
-
-
-/*>>>>>>> Stashed changes*/
+    /*>>>>>>> Stashed changes*/
 }
+
 .boardPlate:hover {
-    background: rgba(255,255,255, .1);
+    background: rgba(255, 255, 255, .1);
 }
+
 .boardPlate.disabled:hover {
     background: none;
 }
@@ -51,26 +58,50 @@
     margin-top: 0;
 }*/
 .playerOne {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    /* max-height: 14.8vw;*/
+
+    /*margin: 0px 80px 20px 50px;*/
+    /*display: grid;
     grid-template-columns: 250px;
     grid-template-rows: 180px 180px 180px 180px 180px;
-    margin: 20px;
-    position: fixed;
-    top: 4.3vw;
+    margin: 20px;*/
+    position: inherit;
+    top: 240px;
     left: 5vw;
-    height: 50.3vw;
+    height: 100%;
+    max-width: 500px;
+    max-height: 600px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
 }
 
+
 .playerTwo {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    /* max-height: 14.8vw;*/
+    top: -365px;
+    /*margin: 0px 80px 20px 50px;*/
+    /*display: grid;
     grid-template-columns: 250px;
     grid-template-rows: 180px 180px 180px 180px 180px;
-    margin: 20px;
-    position: absolute;
-    top: 4.3vw;
-    right: 5vw;
-    height: 50.3vw;
+    margin: 20px;*/
+    position: inherit;
+
+    height: 100%;
+    max-width: 250px;
+    max-height: 600px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    left: 80vw;
+
+
 
 
 }
